@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const db = require("../../db/connections");
-const inputCheck = require("../../utils/inputCheck");
+// const inputCheck = require("../../utils/inputCheck");
 
 router.get("/parties", (req, res) => {
   const sql = `SELECT * FROM parties`;
@@ -48,3 +48,5 @@ router.delete("/party/:id", (req, res) => {
     }
   });
 });
+
+module.exports = router;
